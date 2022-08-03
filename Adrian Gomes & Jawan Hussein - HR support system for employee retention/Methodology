@@ -29,7 +29,7 @@ K-Nearest Neighbour:
   
 Naive Bayes algorithm:
   
-  its a machine learning algorithm that is based upon probability and is subject to chance variation. This algorithm is highly versatile and is applied is a wide
+  Its a machine learning algorithm that is based upon probability and is subject to chance variation. This algorithm is highly versatile and is applied is a wide
   selection of classification tasks
   
   The name "naive" is used because it assumes the features that go into the model is independent of each other. That is changing the value of one feature,
@@ -37,6 +37,16 @@ Naive Bayes algorithm:
   
   The great advantage with Naive Bayes algorithm is the ease and speed at which you can code and make predictions with. Thanks to the advantages, it is 
   easily scalable and is teh algorithm of choice in real world applications, which responds to a user's request instantaneously.
+  
+Logistic regression:
+
+  This type of statistical model (also known as logit model) is often used for classification and predictive analytics. Logistic regression estimates the
+  probability of an event occurring, such as voted or didn’t vote, based on a given dataset of independent variables. Since the outcome is a probability, 
+  the dependent variable is bounded between 0 and 1.
+  
+  Log odds can be difficult to make sense of within a logistic regression data analysis. As a result, exponentiating the beta estimates is common to transform
+  the results into an odds ratio (OR), easing the interpretation of results. The OR represents the odds that an outcome will occur given a particular event, 
+  compared to the odds of the outcome occurring in the absence of that event. 
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -76,9 +86,7 @@ Exploratory Data Analysis (EDA):
   
   
   
-  
-  
-  Training our model:
+ Training our model:
   
   With the data we have collected, we will separate the data into the train and test subset using a 70-30 split (70% for training, 30% for testing).
   These are the variables we will be creating:

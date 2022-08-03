@@ -194,6 +194,12 @@
     
     Due to the fact that this chatbot's purpose is regarding an educational institute, many of the specific necessary entities would be academically-related.
     
+    After understanding intent and entity, it is necessary to find data that best covers as many scenarios that the customer might ask and that you want the chatbot
+    to reply to as possible. The data should contain all the intents you want to be able to answer. It could come from multiple sources as long as they are within
+    the same general domain.
+    
+    For each intent, we should have a sizable amount of examples so that the bot will be able to learn the nature of that intent.
+    
     
     
     ------------------------------------------------------------------------------------------------------------------------------------------------------------

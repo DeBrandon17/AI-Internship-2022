@@ -44,7 +44,8 @@ Logistic regression:
   probability of an event occurring, such as voted or didn’t vote, based on a given dataset of independent variables. Since the outcome is a probability, 
   the dependent variable is bounded between 0 and 1.
   
-  Log odds can be difficult to make sense of within a logistic regression data analysis. As a result, exponentiating the beta estimates is common to transform
+  In logistic regression, a logit transformation is applied on the odds—that is, the probability of success divided by the probability of failure.Log odds 
+  can be difficult to make sense of within a logistic regression data analysis. As a result, exponentiating the beta estimates is common to transform
   the results into an odds ratio (OR), easing the interpretation of results. The OR represents the odds that an outcome will occur given a particular event, 
   compared to the odds of the outcome occurring in the absence of that event. 
 

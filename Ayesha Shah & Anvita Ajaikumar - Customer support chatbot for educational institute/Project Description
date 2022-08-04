@@ -200,8 +200,6 @@
     
     For each intent, we should have a sizable amount of examples so that the bot will be able to learn the nature of that intent.
     
-    
-    
     ------------------------------------------------------------------------------------------------------------------------------------------------------------
     
     **Steps Involved**
@@ -210,21 +208,15 @@
     natural language processing for English) and Keras (an open-source software library that provides a Python interface for artificial neural networks). They
     work well with AI and neural networks. With the research we have completed, we believe the proper methodology for creating this bot would be:
     
-        1. install the library using
-                conda install tensorflow
-                conda install keras
-                conda install pickle5
-                conda install nltk
-        2. import the classes using 
-                import json
-                import numpy as np
-                import random
+        1. things we need for nlp
                 import nltk
-                import utils as u
-                #nltk.download(‘punkt’)
-                #nltk.download(‘wordnet’)
-                from keras.models import Sequential
-                from keras.layers import Dense, Activation, Dropout
-                from keras.optimizers import SGD
+                from nltk.stem.lancaster import LancasterStemmer
+                stemmer = LancasterStemmer()
+        2. things we need for tensorflow
+                import numpy as np
+                import tensorflow as tf
+                import random
+                import warnings
+                warnings.filterwarnings("ignore")
         3. .
                 #write soon.

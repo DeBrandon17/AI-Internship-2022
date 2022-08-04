@@ -77,24 +77,9 @@ To do this, we start by installing all the libraries general to machine learning
 We import all the necessary libraries and packages to read the text file containing a vocabulary dictionary
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+As we have seen, NLP plays a crucial role in enabling computers to understand and process natural human language. This is as implemented above using the autocorrect
+system. By referring to these detailed steps, we are able to comprehend the role of NLP for the design and implementation of our 
+Autocorrect Model. 
 
 
 

@@ -96,23 +96,115 @@ In the following lines, we will demonstrate the fundamental foundation of the fu
 
 To begin, we would need to import the neccessary libraries:
  
-- Pandas
-- Numpy
-- sklearn
-- GaussianNB
+- "Pandas"
+
+- "Numpy"
+
+- "sklearn"
+
+- "GaussianNB"
+
+- "pattern"
+
+- "pyspellchecker"
+
+- "autocorrect"
+
+- "textblob"
+
+- "textdistance"
 
 
-After this, we obtian a suitable data set to train and test our model. Through extensive research, we were able to come up with a file including 1001 of the most popular words used by individuals today. 
+
+
+
+After this, we obtian a suitable data set for our model. Through extensive research, we were able to come up with a file including 1001 of the most popular words 
+used by individuals today. 
+
+
 This set would be enough for a wide range of vocabulary.
+
+
+Cerain terms will need to be defined technically before we go into details about the code.
+
+
+get_count:
+
+- A function that returns a dictionary of word versus frequency.
+
+
+
+get_probs function:
+
+- Used to calculate the probability that any word will appear if randomly selected from the dictionary
+
+
+
 
 Next we need to implement functions to edit our given word, these include 4 main functinons:
 
+
 -'SwitchLetter' (Swaps to adajacent Character)
+
 -'Replace_letter' (Replaces one Character for another)
+
 -'Insert_Letter' (Adds additional Character)
+
 -'Delete_Letter' (Deletes a character)
 
-Then we need to combine the functions and alow the Model to switch between the functions if needed.
+
+
+Then we need to combine the functions and alow the Model to switch between the functions when required.
+
+
+
+
+Our model functions by permitting two edits for a given string in order to create a string with a high probability of being the intended word. 
+
+The function that enables us to perform these edits is called "edit_two_letters".
+
+
+The program will prompt the user to input a word then will go through the dictionary and produce words similar to the input word.
+
+For instance, when a user tries to type the word "attakk" to mean "attack". The autocorrect system produces a number of similar words like "attack" 
+with a probability of 0.000999.
+
+
+
+ 
+
+
+
+
+
+
+
+Completed :),
+
+
+Arham
+David
+Heet
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

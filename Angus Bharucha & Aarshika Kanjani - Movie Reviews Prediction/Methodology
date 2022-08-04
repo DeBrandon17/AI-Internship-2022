@@ -36,9 +36,7 @@ We know it’s a regression task because we are being asked to predict a numeric
 I used the decision tree as my baseline model then built on this experience to tune my candidate models. 
 This approach saves a lot of time as decision trees are quick to train and can give you an idea of how to tune the hyperparameters for my candidate models.
 
-
-
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Training:
 

@@ -36,7 +36,7 @@ We know it’s a regression task because we are being asked to predict a numeric
 I used the decision tree as my baseline model then built on this experience to tune my candidate models. 
 This approach saves a lot of time as decision trees are quick to train and can give you an idea of how to tune the hyperparameters for my candidate models.
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Training:
 
@@ -55,10 +55,12 @@ The parameters used in the function will be the predictor variable and target (p
 Now we import .naive_bayes (our classifier algorithm) from sklearn to train the model 
 Use the .fit function - x_train, y_train as parameters
 
-  
+
 Training accuracy:
 
 We can find how accurate our model is after training, using .accuracy_score from sklearn.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 How will our project solve our problem?
 
@@ -66,3 +68,5 @@ Our project will solve the problems of future viewers who want to watch Marvel m
 The output(predictions) of our model will help future viewers to decide whether to watch the upcoming movies. Our visuals that we have implied 
 in the project will help decide for people whether they would really want to watch an upcoming marvel movie or not, as we are using endgame as our example
 this can also be implied for other future movies as well. 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------

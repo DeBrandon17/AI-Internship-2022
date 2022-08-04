@@ -25,11 +25,7 @@ with open('sample.txt','r',encoding="utf8") as f:
     w = re.findall('\w+', file_name_data)
     
     
-   v = set(w) #vocabulary
-print(f"The first 10 words in our dictionary are: \n{w[0:10]}")
-print(f"The dictionary has {len(v)} words ")
-
-
+   v = set(w) 
 
 def get_probs(word_count_dict):
     probs = {}

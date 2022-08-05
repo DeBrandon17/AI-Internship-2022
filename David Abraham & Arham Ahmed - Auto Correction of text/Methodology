@@ -16,11 +16,6 @@ In order to develop the autocorrection model, an algorithm that lays the groundw
 
 
 
-
-
-To begin, we start by installing all the libraries general to machine learning from the terminal.
-
-
 Next, we import all the necessary libraries and packages to read the text file containing a vocabulary dictionary
 
 

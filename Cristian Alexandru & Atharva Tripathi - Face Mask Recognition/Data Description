@@ -1,1 +1,13 @@
+https://www.kaggle.com/datasets/wobotintelligence/face-mask-detection-dataset
+
+The dataset above contains 6433 images of people with and without masks.
+The ages of the people range anywhere from 5 years old to around about 90.
+
+
+The first 402 images were labeled for training and testing.
+201 for training and 201 for testing.
+
+
+#not the final data description
+#i'll edit it later
 

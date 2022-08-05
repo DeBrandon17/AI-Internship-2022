@@ -11,14 +11,9 @@ These are the algorithms that we implemented in this machine learning project:
 using linear regression, it analysis is used to predict the value of a variable based on the value of another variable. This can be useful to others 
 as the output can predict future desicions in movies. 
 
-2) Decision Trees: 
-A decision tree uses a tree-like model of decisions and their possible consequences, including chance event outcomes,resource costs, and utility.
-It is one way to display an algorithm that only contains conditional control statements.
-
 The graphs that we are going to be using:
 
 1) Pie Chart
-2) Line Graph
 3) Bar Graph
 4) Scatter Graph
 

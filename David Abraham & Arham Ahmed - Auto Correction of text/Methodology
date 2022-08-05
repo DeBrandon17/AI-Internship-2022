@@ -16,7 +16,7 @@ In order to develop the autocorrection model, an algorithm that lays the groundw
 
 
 
-Next, we import all the necessary libraries and packages to read the text file containing a vocabulary dictionary
+Next, we import all the necessary libraries and packages to read the text file containing a vocabulary dictionary.
 
 
 
@@ -29,13 +29,13 @@ Editing is an operation performed on the string to change it to another string.
 One factor that enables us to perform crucial edits is "edit_distance" which is the parameter controlling the number of edit operations to be implemented.
 
 
-Hence, the edit distance is the count of the number of operations performed on a word to edit it.
+Hence, the edit distance is the count of the number of operations performed on a string to edit it.
 
 
 The following are examples of edits:
 
 
-INSERT - a letter should be added.
+INSERT - Adds a letter.
 DELETE - removes a letter.
 SWAP - swaps two adjacent letters.
 REPLACE - changes one letter to another.
@@ -63,17 +63,16 @@ V - the total sum of words in the dictionary.
 When the probabilities are calculated, the actual list of words is grouped by the most likely word from the created candidates.
 
 
-We will need a dictionary to develop an autocorrect system where the smartphone uses history to match the typed words to see if they are correct or not.
+We will need a dictionary to develop an autocorrect system where the model uses history to match the typed words to see if they are correct or not.
 
 
 To do this, we start by installing all the libraries general to machine learning from the terminal.
 
 
-We import all the necessary libraries and packages to read the text file containing a vocabulary dictionary
 
 
-As we have seen, NLP plays a crucial role in enabling computers to understand and process natural human language. This is as implemented above using the autocorrect
-system. By referring to these detailed steps, we are able to comprehend the role of NLP for the design and implementation of our 
+As we have seen, NLP plays a crucial role in enabling computers to understand and process natural human language. This is implemented above using the Autocorrect
+system. By referring to these detailed steps, we are able to comprehend the role of NLP for the design and functioning of our 
 Autocorrect Model. 
 
 
@@ -117,10 +116,10 @@ After this, we obtian a suitable data set for our model. Through extensive resea
 used by individuals today. 
 
 
-This set would be enough for a wide range of vocabulary.
+This set would be enough to provide a wide range of vocabulary.
 
 
-Cerain terms will need to be defined technically before we go into details about the code.
+Certain terms will need to be defined technically before we go into details about the code so as to fully comprehend it. 
 
 
 get_count:
@@ -131,12 +130,12 @@ get_count:
 
 get_probs function:
 
-- Used to calculate the probability that any word will appear if randomly selected from the dictionary
+- Used to calculate the probability that any word will appear if randomly selected from the dictionary.
 
 
 
 
-Next we need to implement functions to edit our given word, these include 4 main functinons:
+Next we need to implement functions to edit our given word, these include four main functinons:
 
 
 -'SwitchLetter' (Swaps to adajacent Character)
@@ -149,7 +148,7 @@ Next we need to implement functions to edit our given word, these include 4 main
 
 
 
-Then we need to combine the functions and alow the Model to switch between the functions when required.
+Then, we need to combine the functions and alow the Model to switch between the functions when required.
 
 
 

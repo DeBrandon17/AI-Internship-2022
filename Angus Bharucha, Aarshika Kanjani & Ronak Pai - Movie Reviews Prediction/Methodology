@@ -1,0 +1,67 @@
+Methodology
+
+So far we have collected the relevant data needed to train and test the model,
+Now we need to create the model. 
+
+To build a movie review model, we first need an algorithm that will act as the foundation from which the program can be coded.
+
+These are the algorithms that we implemented in this machine learning project:
+
+1) Linear Regression: 
+using linear regression, it analysis is used to predict the value of a variable based on the value of another variable. This can be useful to others 
+as the output can predict future desicions in movies. 
+
+The graphs that we are going to be using:
+
+1) Pie Chart
+3) Bar Graph
+4) Scatter Graph
+
+Libraries:
+
+1) Pandas — For handling structured data
+2) Scikit Learn — For machine learning
+3) NumPy — For linear algebra and mathematics
+
+Model Selection:
+
+As mentioned at the start of the article the task is supervised machine learning. 
+We know it’s a regression task because we are being asked to predict a numerical outcome.
+
+I used the decision tree as my baseline model then built on this experience to tune my candidate models. 
+This approach saves a lot of time as decision trees are quick to train and can give you an idea of how to tune the hyperparameters for my candidate models.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Training:
+
+Now we can begin with the actual method as to how we are going to train the model.
+
+We have our data collected and organized, we first need to separate the data into 
+train and test.
+We do this using the train_test_split function, which will split all the data values into variables such as:
+  - x_train
+  - x_test
+  - y_train
+  - y_test
+  
+The parameters used in the function will be the predictor variable and target (predicted feature) variable.
+
+Now we import .naive_bayes (our classifier algorithm) from sklearn to train the model 
+Use the .fit function - x_train, y_train as parameters
+
+
+Training accuracy:
+
+We can find how accurate our model is after training, using .accuracy_score from sklearn.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+How will our project solve our problem?
+
+Our project will solve the problems of future viewers who want to watch Marvel movies as our model will predict the ratings and reviews.
+The output(predictions) of our model will help future viewers to decide whether to watch the upcoming movies. Our visuals that we have implied 
+in the project will help decide for people whether they would really want to watch an upcoming marvel movie or not, as we are using endgame as our example
+this can also be implied for other future movies as well. 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -187,7 +187,7 @@ Key Features of BlueBream
 •	A tool for automatically generating forms.
 •	The Zope Component Architecture (ZCA) executes separation of concerns to develop strong reusable components.
 
-11.	Quixote
+8.	Quixote
 Quixote framework is for writing Web-based applications with Python. Its objectives are adaptability and better performance. There are three versions for it. Version 
 1 is no longer maintained effectively. Version 3 needs Python 3, like Quixote 2. Versions 2 and 3 are effectively kept up and are used by various public sites.
 Key Features of Quixote

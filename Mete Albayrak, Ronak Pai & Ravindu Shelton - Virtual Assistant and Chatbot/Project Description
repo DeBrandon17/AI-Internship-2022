@@ -1,7 +1,0 @@
-We developed a virtual assistant named Marr and a chat bot support incase of any incident. The software searches across different sources such as google and key words 
-based on the specific key phrases and terms that are included in a command.The input will serve as the basis for this search. During this step of the process, it acquires 
-information about the user by adopting a number of different modes of data entry, including voice recognition and manual entry. For example, it may recognize the user's 
-voice as it enters their information. 
-The chatbot uses buttons and pre set sollutions that will allow a user to be able to solve their problem in a matter of minutes. If the issues continue the user will be 
-directly connected to a human employee to hopefully help resolve the situation. The chatbot also allows users to report bugs to help improve the performance of the 
-virtual assistant.

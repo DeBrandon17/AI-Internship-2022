@@ -1,3 +1,251 @@
+**Chatbot Types**
+    
+    After having collected to relevant data required in order to train and test the model, we now need to create it.
+    
+    To build a chatbot, we first require knowing the chatbot type that will act as the foundation from which the program can be coded.
+    
+    There are many chatbot type that we can choose from:
+
+        A) Rule-based
+        B) Self-learning
+            i) Retrieval-based
+            ii) Generative
+    
+    
+    Rule-based:
+    
+        Rule-based chatbots host a sequence of pre-determined rules on which it was initially trained in order to answer customer queries. Unfortunately,
+        this approach is very limited and unable to answer more diverse queries.
+        
+        
+    Self-learning:
+    
+        A self-learning chatbot offers a variety of responses to different questions and can oftentimes provide better answers for more complicated
+        queries/requests. This is significantly more relevant to the chatbot we would like to use, and so we will therefore be using a self-learning chatbot.
+        However, this is also further divided into two more catagories.
+        
+        Retrieval-based:
+        
+            The retrieval-based chatbot functions on predefined inputs, patterns and set responses. Once the question/pattern is entered, the chatbot uses a
+            heuristic approach to deliver the appropriate response. The retrieval-based model is extensively used to design goal-oriented chatbots with
+            customized features like the flow and tone of the bot to enhance the customer experience.
+        
+        Generative:
+            
+            Generative chatbots are not based on predefined responses – they leverage seq2seq neural networks (sequence to sequence is a special class of
+            "Recurrent Neural Network" architectures that is typically used for solving complex language problems like Machine Translation, Question Answering,
+            creating Chatbots, Text Summarization, etc.). This is based on the concept of machine translation where the source code is translated from one
+            language to another language. In seq2seq approach, the input is transformed into an output.
+    
+    Understanding that the purpose of this chatbot is for an educational institute, we have decided to go with a self-learning retrieval-based chatbot. This is
+    because it offers a much wider variety of responses to different questions. It being retrieval-based also means we would be able to customize the fluency
+    in which it responds, as well as the degree of formality and etc. 
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------
+    
+    **Program Platform**
+    
+    # write an assessment regarding multiple program platforms.
+    
+    # evaluate which platform would be most suitable for this project.
+    
+    1.	Django
+It enables developers to develop complex code and apps quickly. It assists in developing quality web applications. It is used for quick developments of APIs
+and web applications. 
+Key Features of Django
+•	Assists you to define patterns for the URLs in your app.
+•	Built-in authentication system.
+•	Simple yet powerful URL system.
+•	Object-oriented programming language database that offers the best data storage and recovery.
+•	The automatic admin interface feature enables the functionality of editing, adding, and deleting things with customization.
+•	Cache framework accompanies multiple cache mechanisms.
+
+2.	CherryPy
+It embeds its own multi-hung server. It can run on any working framework that supports Python. It enables developers to develop web apps similarly they would develop
+any other object-oriented Python program. This results in the development of smaller source code in less time.
+Key Features of CherryPy
+•	A consistent, HTTP/1.1-compliant, WSGI thread-pooled webserver
+•	Easy to run various HTTP servers (for example on multiple ports) at once
+•	Runs on Python 2.7+, 3.5+, PyPy, Jython and Android
+•	Built-in tools for encoding, sessions, caching, authentication, static content, and many more
+•	A powerful configuration system for developers and deployers alike
+•	Built-in profiling, coverage, and testing support
+
+3.  TurboGears
+It is designed to overcome the inadequacies of various extensively used web and mobile app development frameworks. It empowers software engineers to begin developing
+web applications with an insignificant setup. TurboGears enables web developers to streamline Python website development utilizing diverse JavaScript development 
+tools. 
+Key Features of TurboGears
+•	All features are executed as function decorators.
+•	Multi-database support.
+•	Accessible command-line tools.
+•	MochiKit JavaScript library integration.
+•	MVC-style architecture and PasteScript templates.
+•	ToscaWidgets to ease the coordination of frontend design and server deployment.
+
+4.	Web2Py
+Web2py accompanies a debugger, code editor as well as a deployment tool to enable you to build and debug the code, as well as test and keep up web applications. It 
+enables clients to build, revise, deploy, and manage web applications via web browsers. The key component of Web2py is a ticketing framework, which issues a ticket 
+when a mistake occurs. This encourages the client to follow the mistake and its status.
+Key Features of Web2py
+•	Supports settlement over configuration and facilitates quick web development.
+•	Supports MVC Architecture to simplify web development.
+•	Enables developers to work with broadly used relational and NoSQL databases.
+•	Web-Based IDE to accelerate web development projects like cleaning temp files, editing app files, running tests, and browsing past tickets.
+•	It comes with Useful Batteries to build a variety of web apps efficiently without using external tools and services.
+•	Keeps the web apps secure by addressing top vulnerabilities and security issues.
+
+5.	Flask
+Developers can develop the Python backend framework any way they need, however, it was designed for applications that are open-ended. Compared to Django, Flask is 
+best suited for small and easy projects.
+Key Features of Flask
+•	Built-in development server and debugger.
+•	RESTful request dispatching.
+•	Integrated unit testing support (code with quality).
+•	Uses Jinja2 templating (tags, filters, macros, and more).
+•	100% WSGI 1.0 compliant.
+•	Multiple extensions provided by the community that eases the integration of new functionalities.
+
+6.	Tornado
+It utilizes a non-blocking framework I/O and unravels the C10k issue (which means that, whenever configured properly, it can deal with 10,000+ simultaneous 
+connections). This makes it an extraordinary tool for building applications that require superior and a huge number of simultaneous clients.
+Key Features of Tornado
+•	Allows implementation of 3rd-party authentication and authorization schemes.
+•	Superior quality, real-time services, and non-blocking HTTP customers.
+•	It offers high-quality output.
+•	Support for interpretation and localization.
+•	User authentication support and Web templates.
+
+7.	BlueBream
+This framework is best suited for both medium and substantial activities apportioned into various re-usable and well-suited segments. It relies upon Zoop Toolkit (ZTK). 
+It holds extensive periods of experience ensuring that it meets the main essential for enduring, relentless, and adaptable programming.
+Key Features of BlueBream
+•	Emphasizing Python Web Server Gateway Interface (WSGI) compatibility.
+•	Unit and functional testing frameworks.
+•	The basic mechanism for plugged security approaches.
+•	An XHTML-compliant language for developing templates.
+•	A tool for automatically generating forms.
+•	The Zope Component Architecture (ZCA) executes separation of concerns to develop strong reusable components.
+
+8.	Quixote
+Quixote framework is for writing Web-based applications with Python. Its objectives are adaptability and better performance. There are three versions for it. Version 
+1 is no longer maintained effectively. Version 3 needs Python 3, like Quixote 2. Versions 2 and 3 are effectively kept up and are used by various public sites.
+Key Features of Quixote
+•	Simple and flexible design with session management API.
+•	Library of functions to assist in the development and analysis of an HTML form.
+•	HTML templates are written in Python-like syntax and can be imported just like another Python code.
+•	Works with any web server that supports CGI or Fast CGI
+•	Supports Apache’s mod_python
+•	SCGI protocol is also supported
+
+
+
+
+
+
+
+
+
+    
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------
+    
+    **Intent, Entity & Dialog**
+    
+    To properly understand and identify the method that will be most suitable for this project, we first have to figure out the user's intent, the entity, and
+    the dialogue.
+    
+    Chatbots use natural language processing (NLP) to understand the user’s intent which means recognizing user’s aim in starting this conversation. Intent
+    recognition is a critical feature that determines if a chatbot will succeed at fulfilling the user’s needs.
+    
+    The quantity of the chatbot’s training data is essential in order to maintain a good conversation with the user. However, the data quality determines the
+    bot’s ability to detect the right intent and generate the correct response.
+    
+    There are generally 3 steps involved in intent classification:
+        1. Data collection
+        2. Preprocessing
+        3. Morphological analysis
+        4. Machine learning classifier selection and feature extraction
+        5. Performance measure and comparison
+        
+    Natural language processing (NLP) allows the chatbot to understand the user’s message, and machine learning classification algorithms to classify this
+    message based on the training data, and deliver the correct response. The steps required for the chatbot to have an informative conversation include:
+        1. Preprocessing for Natural Language Understanding (NLU)
+                NLU is a sub-catagory in NLP that focuses on organizing the user’s unstructured input such that the chatbot can understand and analyze it. This 
+                process includes:
+                        1. Syntax analysis
+                                Identifying the basic grammar rules, word organization, combination and relation to one another. This consists of:
+                                    - Splitting the text into smaller segments (words, shorter sentences) called "Tokens"
+                                    - Labeling the tokens as noun, verb, adjective, etc. This step is called "Part of Speech" tagging (PoS)
+                                    - Reducing words into their roots for better analysis
+                                    - Filter out filling words to save space and time in processing large data
+                        2. Semantic analysis
+                                Inferring the meaning of the input sentence by:
+                                    - Distinguishing the context of each word
+                                    - Understanding the relationships between the words in the text
+                NLU models utilize:
+                    - Supervised machine learning for syntax analysis steps (tokenization, PoS tagging), such as support vector machines (SVM), Bayesian networks,
+                      and maximum entropy algorithms.
+                    - Unsupervised machine learning for semantic analysis such as clustering algorithms.
+                    
+        2. Chatbot Intent Classificcation
+                Classifiers are trained on relevant labeled datasets, therefore this is a supervised learning application. Classifiers utilize:
+                    - Rules based pattern matching
+                    - Machine learning classification algorithms such as decision trees, naïve Bayes, and logistic regression.
+                    - Deep learning such as artificial neural networks
+                An intent classifier is used to match the output of the NLU process to relevant pre-defined labels in the training dataset. For example, when the
+                user tells the chatbot: “I want to book a flight from Houston to LA”, the intent classifier will classify the context and sequence of words under
+                the label “book flight”.
+        
+        3. Response Generation
+                To generate responses, chatbots either rely on pre-defined recommendations or they could generate recommendations on the fly. For commercial
+                applications, responses tend to be pre-defined to ensure that customers receive a consistent service and the bot does not respond in unintended
+                ways.
+                
+                The dialog is formulated to achieve a specific goal, like acquiring the user’s information, providing suggestions about a product or a service,
+                or directing the user to a live receptionist.
+    
+    Certain things, such as typos and spelling errors, may make it difficult for the chatbot to decipher the user's intent. After understanding various problems
+    such as this, we will implement these solutions:
+    - AI spell checking algorithms can be implemented with NLP models to autocorrect users’ misspellings and typos. For example, Google Docs’s autocorrect feature
+      that points out misspellings, grammatical errors, and provides enhancements on text structure.
+    - Lemmatization will make it easier for the chatbot to understand the user's queries.
+    - Allowing users to create custom intents. For example in Amazon Alexa the user can set rules for the chatbot to perform a specific task by providing a name
+      and a list of utterances that users would say to invoke this intent. [OPTIONAL]
+    - Increasing the volume of training data will decrease the margin of error in intent detection.
+    - Converting to lower case.
+    - Tokenizing (splitting sentences into small decipherable words for the computer to understand) via NLTK's (Natural Language Toolkit) Tweettokenizer.
+    - Filtering out stop-words (irrelvant additional vocabulary).
+    - Removing punctuation and URL links.
+    - Expanding contractions.
+    - Removing emojis and numbers.
+    - Limiting each message length to 50
+      
+    Now, we will move onto entity extraction.
+    
+    Entities are predefined categories of names, organizations, time expressions, quantities, and other general groups of objects that make sense. Using NLP,
+    chatbots can extract entities from entries that users type in in order return around accurate recommendations and answers.
+    
+    Knowing the difference between intent and entity is critical to using chatbots for customer service. Intent implies what the customer is looking for, whereas
+    entity is the specified field/data.
+    
+    Intent and entities in chatbots are both essential to delivering what the customer wants and needs.
+    
+    Due to the fact that this chatbot's purpose is regarding an educational institute, many of the specific necessary entities would be academically-related.
+    
+    After understanding intent and entity, it is necessary to find data that best covers as many scenarios that the customer might ask and that you want the chatbot
+    to reply to as possible. The data should contain all the intents you want to be able to answer. It could come from multiple sources as long as they are within
+    the same general domain.
+    
+    For each intent, we should have a sizable amount of examples so that the bot will be able to learn the nature of that intent.
+    
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+    
+**Steps Involved**
+    
+After doing some research, we were able to come across NTLK (The Natural Language Toolkit, a suite of libraries and programs for symbolic and statistical
+natural language processing for English) and Keras (an open-source software library that provides a Python interface for artificial neural networks). They
+work well with AI and neural networks.
+
+Files involved:
 Intents.json – The data file which has predefined patterns and responses.
 train_chatbot.py – In this Python file, we wrote a script to build the model and train our chatbot.
 Words.pkl – This is a pickle file in which we store the words Python object that contains a list of our vocabulary.
@@ -12,7 +260,7 @@ These are the 5 steps involved:
 4. Build the model
 5. Predict the response
 
-----------------------------------------------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 1. Import and load the data file
 
 In train_chatbot.py we import the necessary packages for our chatbot and initialize the variables. The data file is in JSON format so we used the json package to parse the JSON file into Python.
@@ -38,7 +286,7 @@ data_file = open('intents.json').read()
 intents = json.loads(data_file)
 """
 
-----------------------------------------------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 2. Preprocess data
 
 When working with text data, we need to perform various preprocessing on the data before we make a machine learning or a deep learning model. Based on the requirements we need to apply various operations to preprocess the data.
@@ -81,7 +329,7 @@ pickle.dump(words,open('words.pkl','wb'))
 pickle.dump(classes,open('classes.pkl','wb'))
 """
 
-----------------------------------------------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 3. Create training and testing data
 
 Now, we will create the training data in which we will provide the input and the output. Our input will be the pattern and output will be the class our input pattern belongs to. But the computer doesn’t understand text so we will convert text into numbers.
@@ -117,7 +365,7 @@ train_y = list(training[:,1])
 print("Training data created")
 """
 
-----------------------------------------------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 4. Build the model
 
 We have our training data ready, now we will build a deep neural network that has 3 layers. We use the Keras sequential API for this. After training the model for 200 epochs, we achieved 100% accuracy on our model. Let us save the model as ‘chatbot_model.h5’.
@@ -143,7 +391,7 @@ model.save('chatbot_model.h5', hist)
 print("model created")
 """
 
-----------------------------------------------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 5. Predict the response (Graphical User Interface)
 
 To predict the sentences and get a response from the user to let us create a new file ‘chatapp.py’.
@@ -280,7 +528,7 @@ SendButton.place(x=6, y=401, height=90)
 base.mainloop()
 """
 
-----------------------------------------------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 6. Run the chatbot
 
 To run the chatbot, we have two main files; train_chatbot.py and chatapp.py.

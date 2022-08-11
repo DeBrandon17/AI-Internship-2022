@@ -39,3 +39,12 @@ use estimate bandwidth to find out the estimated number of clusters
 get the silhouette score and Davies Bouldin score for the number of clusters given by estimate bandwidth function
 fit the data to pca to find the primary axes which will be used to  graph and segment it
 finally label each cluster
+
+MiniKMeans
+Import libraries
+Import the dataset and readit
+Check the data - standardize and normalize the data
+Clean the data
+Average it out
+test the silhouette and Davies Bouldin score for several clusters and pick the best one 
+fit the data to PCA to find the primary axes which will be used to  graph and segment it 

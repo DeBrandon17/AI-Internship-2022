@@ -6,3 +6,5 @@ Thats why to remove these distrubances i have decided to create an AI that detec
 will help in you having a better time scrolling through your social media
 
 The dataset contains spam messages from bot accounts and spam messages this can help train the model to identify which are bot comments and which aren't 
+
+i am using a deep learning model with neural networks to trian the model and detect spam and fake accounts

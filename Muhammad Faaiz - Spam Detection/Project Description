@@ -1,1 +1,8 @@
+Have you ever received a notification that someone commented on your Instagram post? You excitedly pick up your phone and open the app only to find that 
+it’s a bot promoting some knockoff brand of shoes. The comment section of many Instagram posts is filled with bots. They can range from annoying to dangerous, 
+depending on the type of call to action they require from you.
 
+Thats why to remove these distrubances i have decided to create an AI that detects these spam comments or messages and filters them out of your feed which 
+will help in you having a better time scrolling through your social media
+
+The dataset contains spam messages from bot accounts and spam messages this can help train the model to identify which are bot comments and which aren't 

@@ -48,3 +48,9 @@ Clean the data
 Average it out
 test the silhouette and Davies Bouldin score for several clusters and pick the best one 
 fit the data to PCA to find the primary axes which will be used to  graph and segment it 
+
+Sillhouette and Davies Bouldin score
+meanshift:silhouette = 0.229,Davies Bouldin = 1.629 
+gaussian mixture:silhouette =0.21 ,Davies Bouldin = 1.52  
+kmeans:silhouette = 0.25,Davies Bouldin = 1.425
+minibatchkmeans:silhouette =0.21 ,Davies Bouldin = 1.9

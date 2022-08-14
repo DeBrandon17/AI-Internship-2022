@@ -8,12 +8,45 @@ efficenit program that can be used
 
 we have  a bunch of algorithms:
   Convolutional Neural Networks:
+  
   is a class of neural networks that specializes in processing data that has a grid-like topology, such as an image
   
-  logistic regression
-  descion tree
+  Linear Regression:
+
+Linear Regression is a simple and mathemacial way to obtain a result based off of two variables, a dependant and independent.
+By plotting the variables in a graph, a correlation or link will be identified through various stages of training and testing, and a 
+straight solid line (best fit) will be produced. 
+Predictions can be solidified based on the line of best fit and errors can easily be identified.
+
+  Random Forest Regressor:
+
+Random Forest Regressor utilises many decision trees to predict and output from a variable. The algorithm calculates the most populous 
+and most commonly occuring outcome and outputs it as a prediction.
+ 
+  TensorFlow:
+
+TensorFlow is an open-source library which can be utilised by Python code. It is described as one the most specialised algorithms
+to train and test various models.
+TensorFlow uses symbolic math which allows for deep neural network training. The TensorFlow algorithm enables an ability where 
+the developers can create graphs / strutures which can describe the data and how it flows, hence allowing it to be modeled.
   
 We are also going to use a bunch of modules and functions from other sources as well
 Such as :
-  pandas, numpy, matplotlib, sklearn, os
+  Libraries:
+
+1) Pandas — For handling structured data
+2) Scikit Learn — For machine learning
+3) NumPy — For linear algebra and mathematics
+
   and use Confusion matrix so it can allow us to visualiza the performance of an algorithm, typically a supervised learning one.
+  
+  Steps:-
+
+
+1. Loading librairies 
+2. Loading Datasets
+3. Performing Exploratory Data Analysis
+   -  this allows us to analyze the datasets main charateristics as in its a form om data selection
+4. Data Preparation: to feed the model 
+5. Building and training the Deep Learning Model
+6. Evaluating the performance of the model 

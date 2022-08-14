@@ -10,7 +10,13 @@ Recurrent Neural Networks (RNN)
 
 we are going to be using Convolution Neural Networks (CNN) because this is the best neural network for our purpose
 
+ANN turns an image into an 1 dimensional array and then uses activation functions but this means we will lose spatial data because the input will be only 1 dimentional when the image is 2 dimentional
+
+RNN loops through past inputs and tries to find a connection but this is mostly used only for text and will not be suitable for images and our goal
+
 CNN uses maths to find edges and identify shapes this is very useful in computer vision to find and identify specific objects in an image and this is why we have also decided to use the CNN algorithim
+
+
 
 to start with our code we first need to import some modules that are required like:
 numpy

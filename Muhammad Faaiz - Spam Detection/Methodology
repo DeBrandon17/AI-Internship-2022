@@ -1,7 +1,36 @@
-ANN training 
+ANN TRAINING;-
+
+To train my model i am using a neural network called ANN or 
+called Artificial Neural network it, basically it is a simple neural network,
+The neuron collects information from input channels named dendrites, processes 
+information in its nucleus and then generates an output in a long thin branch called Axon.
+
+some of its activation funcions include:
+
+1. Sigmoid
+   -Takes a number between 0 and 1
+   -Converts large negative numbers to zero and converts large positive numbers to 1
+   -It is generally used as Output Layer. but in our model, we are using softmax as the ouput layer.
+
+2. Softmax
+
+   -The softmax function is sometimes called the softargmax function, or multi-class logistic regression. 
+    This is because the softmax is a generalization of logistic regression that can be used for multi-class classification, 
+    and its formula is very similar to the sigmoid function which is used for logistic regression. The softmax is very useful 
+    because it converts the scores to a normalized probability distribution, which can be displayed to a user or used as input 
+    to other systems. For this reason it is usual to append a softmax function as the final layer of the neural network.
+
+
+......................................................................................................................................................
+
+
+Steps:-
+
+
 1. Loading librairies 
 2. Loading Datasets
 3. Performing Exploratory Data Analysis
    -  this allows us to analyze the datasets main charateristics as in its a form om data selection
 4. Data Preparation: to feed the model 
-5. 
+5. Building and training the Deep Learning Model
+6. Evaluating the performance of the model 

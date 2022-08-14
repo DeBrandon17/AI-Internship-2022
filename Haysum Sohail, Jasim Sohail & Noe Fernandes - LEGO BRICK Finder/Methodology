@@ -7,7 +7,9 @@ To make the LEGO brick Finder we need to experiment with different programs and 
 efficenit program that can be used 
 
 we have  a bunch of algorithms:
-  Convolutional Neural Networks
+  Convolutional Neural Networks:
+  is a class of neural networks that specializes in processing data that has a grid-like topology, such as an image
+  
   logistic regression
   descion tree
   

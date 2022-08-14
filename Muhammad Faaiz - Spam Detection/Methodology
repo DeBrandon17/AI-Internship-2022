@@ -1,1 +1,7 @@
-
+ANN training 
+1. Loading librairies 
+2. Loading Datasets
+3. Performing Exploratory Data Analysis
+   -  this allows us to analyze the datasets main charateristics as in its a form om data selection
+4. Data Preparation: to feed the model 
+5. 

@@ -1,13 +1,12 @@
-https://www.kaggle.com/datasets/wobotintelligence/face-mask-detection-dataset
+https://github.com/balajisrinivas/Face-Mask-Detection
+#The data set is in this git hub repo
 
-The dataset above contains 6433 images of people with and without masks.
-The ages of the people range anywhere from 5 years old to around about 90.
+There are two separate folders in the dataset:
 
-
-The first 402 images were labeled for training and testing.
-201 for training and 201 for testing.
-
-
-#not the final data description
-#i'll edit it later
-
+  One for images with mask:
+    This contains 1,915 images
+  
+  One for images without masks:
+    This contains 1,918 images
+    
+The age of the people in these images vary anywhere from 15 to 70.

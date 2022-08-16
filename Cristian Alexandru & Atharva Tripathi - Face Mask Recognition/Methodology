@@ -1,6 +1,10 @@
 We have already collected all the data to train and test the model, but now we need to build it.
 
+# (Google colab was the editor used for this project) #
+
 Steps:
+
+--------------------------------------------------------------------------------------------------------------------
 
 We will first start by installing the dependancies:
 
@@ -39,4 +43,8 @@ Then we imported the necessary libraries and packages:
   import numpy as np
   import os
   
-#not the final methodology
+We also loaded the data using the os.mkdir() method.
+
+--------------------------------------------------------------------------------------------------------------------
+Data preprocessing
+

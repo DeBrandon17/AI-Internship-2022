@@ -1,1 +1,11 @@
+Data description
+
+The dataset contains data about the racetrack and certain obstacles in the way of it, and we used the
+Object Detection method to identify specific objects in the car's view.
+
+We have 3 labels:
+
+Borders
+Drivable Land
+Obstacle
 

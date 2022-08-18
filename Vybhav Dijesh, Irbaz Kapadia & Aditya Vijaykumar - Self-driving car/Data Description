@@ -9,3 +9,5 @@ Borders
 Drivable Land
 Obstacle
 
+We took approximately 1000 images of the track and are using 80% of the data for training and 20% for testing the model.
+

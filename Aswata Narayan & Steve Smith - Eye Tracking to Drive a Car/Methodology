@@ -1,1 +1,8 @@
-
+1.We first gathered the eyes of different people for the machine learning model
+2.We created a dataset out of these eyes and split it into a train,test and valid split
+3.We used the dataset to create a model using tensorflow which can detect the gaze of peoples' eyes
+4.Then we created a eye tracker using dlib libary
+5.We then created a protype of the car to be controlled using Lego Spike Prime
+6.We then connected the Spike Prime and Raspberry pi via bluetooth
+7.We then wrote a program to make the car move depending on wether gaze of the eyes which were detected
+8.Finally we combined the model, the eye tracker and the movement program to make the Spike Prime Car move using eye movements

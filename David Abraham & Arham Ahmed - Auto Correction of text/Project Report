@@ -1,1 +1,23 @@
+ Autocorrect as the name suggests is a type of software that is capable of correcting an incorrectly spelled word. Ever since we have been able to type text
+using keyboards, individuals faced the problem of accidentally inputting a wrong character hence resulting in an incorrect word with sometimes a completely 
+different meaning. This is a relatable problem faced by countless people and is always considered as an annoying circumstance. Hence, came the reason why
+we chose the autocorrect project in an effort to solve this elusive problem. Needless to say, Autocorrect has several advantages such as increasing 
+productivity and improving time management. 
+
+
+
+
+  We now move deeper into the workings and functionings of our project which involves explaining the gathering of data and construction of the code.  
+Our code was split into two parts: Section one,”preperations” and Section two, ’Editing’. The first performs all the tasks characterisitc to a code such as 
+importing libraries, reading the data file, and creating the required variables. The mentioned data file includes 1001 of the most popular words used by 
+individuals. The following section involves creating four specific functions whose roles are to edit the inputted word more speciofically to delete, switch, 
+replace, and insert a string. The primary purpose of these functions is to ensure that the output is matched by outcome predicted by the model.
+
+
+
+  To conclude, the resulting product was a  successful working Autocorrect model that performed its given function flawlessly. Our model is easily understood 
+enabling users to utilize it easily and aiding them in fixing spelling mistakes seamlessly during their typing.  
+
+
+
 

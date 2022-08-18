@@ -3,7 +3,7 @@
     Educational institutes (schools, colleges, universities) often have an official website where parents and students would oftentimes visit with queries and/or
     complaints. Oftentimes the website may prove too difficult to navigate and/or confusing, otherwise the website would redirect the parents/students to a phone
     call with the school's receptionists. However, in the latter case, it adds more duties to the hands of the receptionists and makes it more difficult to answer
-    numerous calls. Another problem is that parents and students may not want to call for various reasons. It may also be very inconvenient for studdents and
+    numerous calls. Another problem is that parents and students may not want to call for various reasons. It may also be very inconvenient for students and
     parents to be put on hold when they call.
     
     

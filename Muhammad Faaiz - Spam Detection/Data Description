@@ -1,0 +1,18 @@
+There are few key input features which need to be considered to determine if the account is fake or not.
+
+These features are included int he datasets:
+1.  PROFILE PICTURE - wehter the user has profile picture or not.
+2.  NUMS/LENGTH USERNAME - number of numerical chars in username to its length.
+3.  FULLNAME WORDS - Full name in word tokens (the number of individual words in the text)
+4.  NAME/LENGTH OF FULL NAME - ratio of number of numerical characters in full name to its length.
+5.  NAME == USERNAME - Is the username and full name  the same?
+6.  DESCRIPTION LENGTH - Bio length in characters.
+7.  EXTERNAL URL - does the account have an external URL or not.
+8.  PRIVATE - Private or not.
+9.  POSTS - Number of posts.
+10. FOLLOWERS - Number of followers.
+11. FOLLOWS - Number of follows.
+
+this dataset was amde and provided by:
+BARDIYA BAKHSHANDEH
+https://www.kaggle.com/datasets/free4ever1/instagram-fake-spammer-genuine-accounts

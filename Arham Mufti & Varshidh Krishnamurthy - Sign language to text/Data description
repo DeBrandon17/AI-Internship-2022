@@ -1,1 +1,4 @@
+In our dataset, our different columns with different values allow us to distinguish between the different pictures and hence different letters.
+
+Our dataset comes from an image showing the signs for different letters and hence allows us to classify new images when scanning from the existing database.
 

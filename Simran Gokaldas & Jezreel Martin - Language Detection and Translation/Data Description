@@ -1,1 +1,5 @@
+What is a MT5?
+The mt5 covers 101 languages and is a variant of a T5. The T5 is a Text-to-Text Transfer Transformer which unifies a text-to-text format and scale to attain 
+state-of-the-art results on a wide variety of English-language NLP tasks. The mt5 is a massively multilingual pre-trained text-to-text transformer that was 
+pre trained on a mc4 and needs to be fine-tuned before it is useable on a downstream task.
 

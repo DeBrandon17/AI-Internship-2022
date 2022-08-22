@@ -61,6 +61,11 @@ Before writing any code we must first import the libraries we need.
 - pandas, matplotlib, scikit-learn, numpy, keras.
 
 Then, we imported our data which consists of 4000 images of a race track.
+
+These images underwent image processing, to reduce the image size which makes it easier for the model to process 
+(removing unecessary features and using gausian blur)
+These images were then converted into a numpy array
+
 We compared the original image to a preprocessed image.
 
 Training:

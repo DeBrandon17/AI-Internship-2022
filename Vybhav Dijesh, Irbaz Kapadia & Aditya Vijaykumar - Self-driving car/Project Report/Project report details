@@ -1,0 +1,11 @@
+Project Report:
+ After training the model for 25 epochs, it was tested on the udacity driving simulator with a completely different track
+ (See other project report file for evidence)
+ 
+ The simulation ran with loss: 1.1619 - accuracy: 0.5595 - val_loss: 0.1377 - val_accuracy: 0.8309,
+ this was a major improvement to the previous values which had a much lower accuracy and nearly double the loss rate
+ 
+ We have used three dense layers with 100, 50 and 10 neurons respectively and elu as the activation function
+ Also in between, We have used 50% dropouts to reduce over-fitting the values 
+ (See other project report file for accuracy and loss graph)
+ 

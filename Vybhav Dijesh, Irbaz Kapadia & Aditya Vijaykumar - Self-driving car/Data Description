@@ -3,6 +3,7 @@ Data description:
 The dataset was obtained from github
 
 The images caontain various angles of the track ( straight paths, turns, inclines and declines)
+The dataset has 6 columns — center, left, right, steering, throttle, reverse, speed (values)
 
 In this project Udacity driving simulator has been used which has two different tracks. One of them was used for collecting training data,
 and the other one — never seen by the model — as a substitute for test set.The driving simulator would save frames from three front-facing "cameras",

@@ -1,18 +1,21 @@
-Data description
+Data description:
 
-The dataset contains data about the racetrack and certain obstacles in the way of it, and we used the
-Object Detection method to identify specific objects in the car's view.
+The dataset was obtained from github
 
-What is Object detection?
+The images caontain various angles of the track ( straight paths, turns, inclines and declines)
 
-Object detection is a computer vision technique that works to identify and locate objects within an image or video.
-Specifically, object detection draws bounding boxes around these detected objects, which allow us to locate where said objects are in a given scene.
+In this project Udacity driving simulator has been used which has two different tracks. One of them was used for collecting training data,
+and the other one — never seen by the model — as a substitute for test set.The driving simulator would save frames from three front-facing "cameras",
+recording data from the car's point of view; as well as various driving statistics like throttle, speed and steering angle. 
+We are going to use camera data as model input and expect it to predict the steering angle in the [-1, 1] range.
 
-We have 3 labels:
 
-Borders
-Drivable Land
-Obstacle
 
-We took approximately 1000 images as our data and are using 80% of it for training the model and 20% for testing the model.
+
+
+
+
+
+
+
 

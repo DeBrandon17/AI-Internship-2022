@@ -1,0 +1,6 @@
+We utilized three folders in our project: train, test, and validation. 
+The major folder for assisting the artificial intelligence in understanding the photographs, Train, 
+has 570 images of the pupils, 10 of which are from the left, right, and front.
+Last but not least, we have validation, which is used for assessment and has 3 photos per student for the evaluation,
+all of which are distinct from the test's 8 images, one from each student, used to determine if the ai is functioning 
+or not.

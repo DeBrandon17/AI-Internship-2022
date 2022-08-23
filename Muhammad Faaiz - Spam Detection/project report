@@ -1,0 +1,8 @@
+We achieved 97% percent accuracy in detecting the fake accounts by training the model using datasets and 88% percent accuracy in testing . 
+We have checked whether the model has reached the ability to detect an account is fake or not by inputting different set of data values.
+We could say our model is pretty accurate and has a good 
+I then proceeded to test it by inputing values that were not their in the training and testing dataset:
+At which it got a 88% accuracy score 
+..................................................................................................................................
+
+The model is hence trained to detect fake accounts in instagram based on the considered features.

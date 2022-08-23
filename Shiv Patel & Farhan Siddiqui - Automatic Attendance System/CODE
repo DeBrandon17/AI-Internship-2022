@@ -1,0 +1,218 @@
+from tensorflow.keras.layers import Input, Lambda, Dense, Flatten,Dropout      #things we need to import for the code  
+from tensorflow.keras.models import Model                                       
+from tensorflow.keras.applications.vgg19 import VGG19
+from tensorflow.keras.applications.vgg19 import preprocess_input
+from tensorflow.keras.preprocessing import image
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
+from tensorflow.keras.models import Sequential
+from google.colab.patches import cv2_imshow
+from tensorflow.keras.utils import to_categorical
+from tensorflow.keras.applications.vgg19 import decode_predictions
+import numpy as np
+import pandas as pd
+import os
+import cv2                   
+import matplotlib.pyplot as plt
+import tensorflow as tf
+import tensorflow_datasets as tfds
+
+from google.colab import drive     #This allows us to access folders from Google Drive
+drive.mount('/content/drive')
+
+train_path="/content/drive/MyDrive/Train"       
+test_path="/content/drive/MyDrive/Test"         #folder locations on drive
+val_path="/content/drive/MyDrive/Validation"
+
+x_train=[] #image resizing for train folder
+
+for folder in os.listdir(train_path):
+
+
+    sub_path=train_path+"/"+folder
+
+    print(sub_path)
+    for img in os.listdir(sub_path):
+
+        image_path=sub_path+"/"+img
+        print(image_path)
+
+        img_arr=cv2.imread(image_path)
+        print(img_arr)
+        img_arr=cv2.resize(img_arr,(224,224))
+
+        x_train.append(img_arr)
+x_test=[] #image resizing for test folder
+
+for folder in os.listdir(test_path):
+
+
+    sub_path=test_path+"/"+folder
+
+    print(sub_path)
+    for img in os.listdir(sub_path):
+      
+        image_path=sub_path+"/"+img
+        print(image_path)
+
+        img_arr=cv2.imread(image_path)
+        print(img_arr)
+        img_arr=cv2.resize(img_arr,(224,224))
+
+        x_test.append(img_arr)
+x_val=[] #image resizing for val folder
+
+for folder in os.listdir(val_path):
+
+
+    sub_path=val_path+"/"+folder
+
+    print(sub_path)
+    for img in os.listdir(sub_path):
+
+        image_path=sub_path+"/"+img
+        print(image_path)
+
+        img_arr=cv2.imread(image_path)
+        print(img_arr)
+        img_arr=cv2.resize(img_arr,(224,224))
+
+        x_val.append(img_arr)
+        
+ train_datagen = ImageDataGenerator(rescale = 1./255) #rescaling
+test_datagen = ImageDataGenerator(rescale = 1./255)
+val_datagen = ImageDataGenerator(rescale = 1./255)
+
+training_set = train_datagen.flow_from_directory(train_path, #target size is essentially the size of input image
+                                                 target_size = (224,224),
+                                                 batch_size = 32, #batch size is the number of samples before the model is updated
+                                                 class_mode = 'sparse')
+test_set = test_datagen.flow_from_directory(test_path,
+                                            target_size = (224, 224),
+                                            batch_size = 32,
+                                            class_mode = 'sparse')
+val_set = val_datagen.flow_from_directory(val_path,
+                                            target_size = (224, 224),
+                                            batch_size = 32,
+                                            class_mode = 'sparse')
+                                            
+ train_y=training_set.classes #training the. three folders
+test_y=test_set.classes
+val_y=val_set.classes
+print(training_set.classes)
+
+training_set.class_indices #indices for each of the students
+
+train_y.shape,test_y.shape,val_y.shape  
+
+IMAGE_SIZE = [224, 224] #VGG-19 is CNN that is 19 layers deep. It can load a pretrained version of the network trained on more than a million images. It can classify the images
+vgg = VGG19(input_shape=IMAGE_SIZE + [3], weights='imagenet', include_top=False)
+for layer in vgg.layers:
+    layer.trainable = False
+x = Flatten()(vgg.output)
+prediction = Dense(10, activation='softmax')(x)
+model = Model(inputs=vgg.input, outputs=prediction)
+
+model.summary() #is textual and includes info about layers and their order in the model
+
+model.compile( #compiles the model
+  loss='sparse_categorical_crossentropy',
+  optimizer="adam",
+  metrics=['accuracy']
+)
+
+from tensorflow.keras.callbacks import EarlyStopping
+early_stop=EarlyStopping(monitor='val_loss',mode='min',verbose=1,patience=5)
+
+'tensorflow==2.7.0',
+'tf-models-official==2.7.0',
+'tensorflow_io==0.23.1',
+
+history = model.fit( #Most important part of the code. We chose epoch as 15 to make it most accurate
+  training_set,
+  validation_data=val_set,
+  epochs = 15,
+  batch_size = 32,shuffle=True,)
+  
+  plt.plot(history.history['accuracy'], label='train acc') #plots graphs regarding our model's accuracy
+
+plt.plot(history.history['val_accuracy'], label='val acc')
+
+plt.legend()
+
+plt.savefig('vgg-acc-rps-1.png')
+
+plt.show()
+
+plt.plot(history.history['loss'], label='train loss') #plots graphs regarding our model's accuracy
+plt.plot(history.history['val_loss'], label='val loss')
+plt.legend()
+plt.savefig('vgg-loss-rps-1.png')
+plt.show()
+
+from sklearn.metrics import accuracy_score,classification_report,confusion_matrix
+import numpy as np
+
+train_x=np.array(x_train)
+test_x=np.array(x_test)
+val_x=np.array(x_val)
+train_x=train_x/255.0
+test_x=test_x/255.0
+val_x=val_x/255.0
+
+train_y=training_set.classes
+test_y=test_set.classes
+val_y=val_set.classes
+print(training_set.classes)
+
+train_y.shape,test_y.shape,val_y.shape  
+
+y_pred=model.predict(test_x) #predicts model
+y_pred=np.argmax(y_pred,axis=1)
+
+print(classification_report(y_pred,test_y)) #prints classification report
+
+print(confusion_matrix(y_pred,test_y)) #determines performance
+
+print(train_x[0][0][0])
+
+attendance = [["Aarav Maruq","absent"],["Aditya Raghav","absent"],["Ahmed Noor","absent"],["Aswata Narayan","absent"],["Brandon Fernandes","absent"],["Denver Jonathan Pereira","absent"],["Irbaz Kapadia","absent"],["Shiv Patel","absent"],["Vybhav Dijesh","absent"]] #our array which will be exported to google sheets
+
+img_arr=cv2.imread("/content/drive/MyDrive/TESTNG IMAGES/Irbaz Kapadia/WIN_20220811_12_27_37_Pro.jpg")
+img_arr=cv2.resize(img_arr,(224,224))
+img_arr = img_arr.reshape((1, 224, 224, 3))
+x = model(img_arr) 
+#print(x.numpy().argmax())
+if(x.numpy().argmax()) == 0:
+  print ("Aarav Maruq = present")
+  attendance[0][1] = "present" 
+if(x.numpy().argmax()) == 1:
+  print ("Aditya Raghav = present") 
+  attendance[1][1] = "present" 
+if(x.numpy().argmax()) == 2:
+  print ("Ahmed Noor = present") 
+  attendance[2][1] = "present" 
+if(x.numpy().argmax()) == 3:
+  print ("Aswata Narayan = present") 
+  attendance[3][1] = "present" 
+if(x.numpy().argmax()) == 4:
+  print ("Brandon Fernandes = present") 
+  attendance[4][1] = "present" 
+if(x.numpy().argmax()) == 5:
+  print ("Denver Jonathan Pereira = present")
+  attendance[5][1] = "present"  
+if(x.numpy().argmax()) == 6:
+  print ("Irbaz Kapadia = present")
+  attendance[6][1] = "present"  
+if(x.numpy().argmax()) == 7:
+  print ("Shiv Patel = present")
+  attendance[7][1] = "present"  
+if(x.numpy().argmax()) == 8:
+  print ("Vybhav Dijesh = present")
+  attendance[8][1] = "present"   
+  
+  print (attendance)
+  
+  import pandas as pds #transfers array to google sheets
+df = pds.DataFrame(attendance)
+filepath = '/content/drive/MyDrive/attendance.xlsx'
+df.to_excel(filepath, index = False)

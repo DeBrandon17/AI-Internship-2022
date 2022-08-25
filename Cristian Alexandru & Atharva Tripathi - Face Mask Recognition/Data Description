@@ -1,12 +1,18 @@
 https://github.com/balajisrinivas/Face-Mask-Detection
 #The data set is in this git hub repo
 
+
 There are two separate folders in the dataset:
 
-  One for images with mask:
-    This contains 1,915 images
+  - One for images with mask:
+   This contains 1,915 images
+ 
+  - One for images without masks:
+   This contains 1,918 images
   
-  One for images without masks:
-    This contains 1,918 images
-    
-The age of the people in these images vary anywhere from 15 to 70.
+The age of the people in these images vary anywhere from 10 to 70.
+
+Why is age important:
+
+It is important because someone at the age of 50 has a different face structure than someone at age 12. 
+This variety ensures that our model will be more accurate.

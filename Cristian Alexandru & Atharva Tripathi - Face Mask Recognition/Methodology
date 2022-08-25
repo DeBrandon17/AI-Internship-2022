@@ -1,50 +1,88 @@
-We have already collected all the data to train and test the model, but now we need to build it.
+Note, Anything in triple quotes is considered code.
 
-# (Google colab was the editor used for this project) #
+Methodology
 
-Steps:
+Steps :
 
---------------------------------------------------------------------------------------------------------------------
+1. Installing/Importing Dependencies
 
-We will first start by installing the dependancies:
+If you are on Google Colab, you may want to start by        importing the dependencies :  
 
-#They might already be installed in some machines,
-#but we didn't have them so we had to install them.
+'''import cv2
+import os
+import numpy as np   
+from tensorflow.keras.preprocessing.image import img_to_array
+from tensorflow.keras.models import load_model
+from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
+from google.colab.patches import cv2_imshow'''
 
-  tensorflow
-  keras
-  imutils
-  numpy
-  opencv
-  matplotlib.pyplot
-  argparse
-  scipy
-  
-Then we imported the necessary libraries and packages:
 
-  from tensorflow.keras.preprocessing.image import ImageDataGenerator
-  from tensorflow.keras.applications import MobileNetV2
-  from tensorflow.keras.layers import AveragePooling2D
-  from tensorflow.keras.layers import Dropout
-  from tensorflow.keras.layers import Flatten
-  from tensorflow.keras.layers import Dense
-  from tensorflow.keras.layers import Input
-  from tensorflow.keras.models import Model
-  from tensorflow.keras.optimizers import Adam
-  from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
-  from tensorflow.keras.preprocessing.image import img_to_array
-  from tensorflow.keras.preprocessing.image import load_img
-  from tensorflow.keras.utils import to_categorical
-  from sklearn.preprocessing import LabelBinarizer
-  from sklearn.model_selection import train_test_split
-  from sklearn.metrics import classification_report
-  from imutils import paths
-  import matplotlib.pyplot as plt
-  import numpy as np
-  import os
-  
-We also loaded the data using the os.mkdir() method.
+2. Loading the model
+	
+	We first need to clone this github repo : https://github.com/misbah4064/face_mask_detection.git.
+  We used this as a reference since it contains “haarcascade_frontalface_alt2.xml”.
+  This is a not so complex algorithm used to detect anything in an image. In our case, we trained it to detect masks. 
+  The github repo also contains “mask_recog.h5”, (the model that we used). The code below shows how we loaded the haar cascade and the model.
 
---------------------------------------------------------------------------------------------------------------------
-Data preprocessing
+'''face_cascade=cv2.CascadeClassifier("haarcascade_frontalface_alt2.xml")
+model=load_model("mask_recog.h5")'''
+
+
+3. Making The Function
+
+We started by defining our function:
+
+'''def mask_detector(frame):'''
+
+“frame”, in this case, is the image that we are giving the function. 
+After this, we convert the image color to grayscale.
+
+gray=cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
+
+Then, we started framing the faces of the people in the images. 
+
+'''for (x,y,w,h) in faces:  
+      faceframe=frame[y:y+h,x:x+w]
+      faceframe=cv2.cvtColor(faceframe,cv2.COLOR_BGR2RGB)
+      faceframe=cv2.resize(faceframe,(224,224))
+      faceframe=img_to_array(faceframe)
+      faceframe=np.expand_dims(faceframe,axis=0)
+      faceframe=preprocess_input(faceframe)
+      facelist.append(faceframe)'''
+
+The code above creates a green or red frame depending on whether the person has a mask or not. 
+
+
+
+4. Labeling The Images/Frames
+
+In this step, we will be labeling the frames. If the frame is green, the label will display “Mask”. If the frame is red, the label will display “No Mask”.
+
+'''label="mask" if mask>no_mask else "no_mask"  #Labeling the images
+color=(0,255,0) if label=="mask" else (255,0,0) #Coloring the labels
+label="{}: {:.2f}%".format(label,max(mask,no_mask)*100)   cv2.putText(frame,label,(x,y-10),cv2.FONT_HERSHEY_SCRIPT_COMPLEX,7,color,2)
+cv2.rectangle(frame,(x,y),(x+w,y+h),color,3)'''
+
+
+5. Running The Code
+
+To run the code that we have written until now, we have to give an input and call the function.
+
+'''var=input("Enter the image name : ")
+input_img=cv2.imread(var)
+results=mask_detector(input_img)
+cv2_imshow(results)'''
+
+
+
+
+
+
+
+
+
+
+
+
+
 
